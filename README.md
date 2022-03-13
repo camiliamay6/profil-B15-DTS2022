@@ -6,3 +6,5 @@ Anggota kelompok:
 <br>3.
 <br>4.
 <br>5.
+
+Link web: https://meilakamilia.github.io/profil-B15-DTS2022/
