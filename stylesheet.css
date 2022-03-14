@@ -204,6 +204,9 @@ font-weight: normal;
 
 form {
   font-family: Arial;
+  background-color: #f7f7f7;
+  border: 4px solid #f7f7f7;
+  border-top:3px solid whitesmoke;
 }
 
 form .container {
