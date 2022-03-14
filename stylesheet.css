@@ -4,63 +4,21 @@
   font-family: sans-serif;
 }
 a {
-color: inherit;
-text-decoration: none;  
+  color: inherit;
+  text-decoration: none;  
+}
+
+html {
+  scroll-behavior: smooth;
 }
 .container {
   width:80%;
   margin:0 auto;
 }
 .container::after {
-content: none;
-display: block;
-clear: both;
-}
-header h1 {
-float: left;
-padding:15px 0;
-Color:#fff;
-}
-header ul {
-float: right;
-}
-header ul li {
-display: inline-block;
-}
-header ul li a {
-padding:25px 20px;
-display: inline-block;
-}
-header ul li a:hover {
-background-color:#e15f41;
-color: #fff;
-}
-.active {
-background-color:#e15f41;
-color: rgb(224, 135, 135) #f3a683;
-}  
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(banner.jpg);
-  background-size: cover;
-  color: white;
-  text-align: center;
-}
-.top-wrapper:after {
-  content: '';
+  content: none;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:rgb(224, 135, 135, 0.6);
-}
-.top-wrapper h2 {
-  color:#fff;
-  padding: 20px 25px;
-  border:3px solid #fff;
-  z-index: 1;
+  clear: both;
 }
 header {
   height: 65px;
@@ -70,73 +28,178 @@ header {
   top:0;
   z-index: 10;
 }
-.menu-icon{
-  color: white;
+header h1 {
+  float: left;
+  padding:15px 0;
+  color:#fff;
+}
+header ul {
   float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
+}
+header ul li {
+  display: inline-block;
+}
+header ul li a {
+  padding:25px 20px 21px 20px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+header ul li a:hover {
+  background-color:#e15f41;
+  color: #fff;
+}
+.active {
+  background-color:#e15f41;
+  color: rgb(224, 135, 135) #f3a683;
+}    
+.head-container{
+  background-image: linear-gradient(to bottom right, #F3A683, #FFE9DE, #FAF5F3);
+  box-shadow: 0 0 5px 10px #FFE9DE;
+  height: 500px;
+  animation: float-up 1s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes float-up{
+  from { top: 20px;}
+  to { opacity:1; top: 0px}
+}
+
+.content-text{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 20px;
+  margin: 70px 150px 0px 150px;
+  color: #E15F41;
+  animation: swipe-left 3s;
+}
+
+.content-text * {
+  padding-top: 20px;
+}
+.content-text h1 {
+  font-size: 50px;
+}
+
+.content-text p {
+  font-size: 20px;
+}
+
+.btn-group {
+  display: inline-block;
+  margin-top: 20px;
+  
+}
+.btn{
+  display: inline-block;
+  margin-right: 20px;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #F78550;
+  letter-spacing: 2px;
+  color: #6E2B0B;
+  transition: all 0.3s;
+  box-shadow: 0px 7px #e15f41;
+}
+
+.btn:hover{
+  background-color: #FAF5F3;
+  color: #F78550;
+}
+
+.btn:active{
+  position: relative;
+  box-shadow: none;
+  top: 7px;
+}
+.content-img{
+  float: right;
+  padding: 75px 0;
+  animation: swipe-right 3s;
+}
+
+.content-img img {
+  width: 500px
+}
+
+@keyframes swipe-left {
+  from { margin-left: -593px;}
+  to { margin-left: 150px;}
+}
+
+@keyframes swipe-right {
+  from { margin-right: -500px;}
+  to { margin-right: 0px;}
 }
 
 .lesson-wrapper {
-    height: 500px;
-    padding-bottom: 80px;
-    background-color: #f7f7f7;
-    text-align: center;
+  height: 500px;
+  padding-bottom: 80px;
+  background-color: #f7f7f7;
+  text-align: center;
 }
 
 .heading {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    color: #5f5d60;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: #5f5d60;
 }
 
 .heading h2 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
+.lessons {
+  margin-top: 20px;
+}
 .lesson {
-    float: left;
-    width: 20%;
+  float: left;
+  width: 20%;
 }
 
 .lesson-icon {
-    position: relative;
+  position: relative;
 }
 
+.lesson-icon * {
+  margin-top: 20px;
+}
 .lesson-icon p {
-    /* position: absolute; */
-    top: 130px;
-    width: 100%;
-    color: black;
-    font-weight: bold;
+  /* position: absolute; */
+  top: 130px;
+  width: 100%;
+  color: black;
+  font-weight: bold;
 }
 
 .lesson-icon span {
-    /* position: absolute; */
-    top: 130px;
-    width: 100%;
-    color: black;
+  /* position: absolute; */
+  top: 130px;
+  width: 100%;
+  color: black;
 }
 
 .avatar {
-    vertical-align: middle;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .txt-contents {
-    width: 80%;
-    display: inline-block;
-    /* margin-top: 20px; */
-    font-size: 15px;
-    color: #b3aeb5;
+  width: 80%;
+  display: inline-block;
+  /* margin-top: 20px; */
+  padding-top: 20px;;
+  font-size: 15px;
+  color: #b3aeb5;
 }
 
 .heading h3 {
-  font-weight: normal;
+font-weight: normal;
 }
 
 form {
@@ -149,7 +212,7 @@ form .container {
   box-shadow: 7px 7px 7px grey;
   border-radius: 30px;
   width: 35%;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   margin-top: 100px;
 }
 
@@ -182,64 +245,46 @@ input[type=submit]:active {
   box-shadow: none;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
 .footer {
-    background-color: #f3a683;
-    color: #fff;
-    height: 150px;
+  background-color: #f3a683;
+  color: #fff;
+  height: 150px;
 }
 
 .footer-logo {
-    font-size: 36px;
-    padding-top: 10px;
-    font-weight: bold;
-    padding-left: 95px;
+  font-size: 36px;
+  padding-top: 10px;
+  font-weight: bold;
+  padding-left: 95px;
 }
 
 .footer-logo span {
-    color: #e15f41;
+  color: #e15f41;
 }
 
 .footer-list {
-    float: left;
-    margin-left: 95px;
+  float: left;
+  margin-left: 95px;
 }
 
 .footer-list li {
-    list-style: none;
-    font-size: 18px;
-    margin-bottom: 10px;
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 10px;
 
 }
 
 .icon-list {
-    padding-right: 5px;
-    position: absolute;
-    right: 95px;
-    top: 120 px;
+  padding-right: 5px;
+  position: absolute;
+  right: 95px;
+  top: 120 px;
 }
 
 
 .icon-list li {
-    margin-left: 20px;
-    display: inline-block;
-    
+  margin-left: 20px;
+  display: inline-block;
+  
 }
+
