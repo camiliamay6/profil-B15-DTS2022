@@ -267,13 +267,14 @@ input[type=submit]:active {
 .footer-list {
   float: left;
   margin-left: 95px;
+  color: #fff;
 }
 
 .footer-list li {
   list-style: none;
   font-size: 18px;
   margin-bottom: 10px;
-
+  
 }
 
 .icon-list {
@@ -287,6 +288,7 @@ input[type=submit]:active {
 .icon-list li {
   margin-left: 20px;
   display: inline-block;
+  color: #fff;
   
 }
 
